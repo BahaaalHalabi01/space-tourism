@@ -1,8 +1,10 @@
-<script lang='ts'>
+<script lang="ts">
 	import '../app.css';
 
 	let { children } = $props();
-
 </script>
 
-{@render children()}
+<nav class="flex justify-between p-4"><img src="hello" alt="logo" /><button>toggle</button></nav>
+<main>
+	{@render children()}
+</main>
