@@ -23,6 +23,9 @@ export default {
       fontFamily: {
         sans: ['"Barlow Condensed"', ...theme.fontFamily.sans],
         serif: ['Bellefair', ...theme.fontFamily.serif]
+      },
+      backgroundImage: { home: "url('/home/background.jpg')", 
+'home-mobile': "url('/home/background-mobile.jpg')",
       }
     }
   },

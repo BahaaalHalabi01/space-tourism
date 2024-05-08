@@ -19,7 +19,7 @@
 	}
 
 	body {
-		@apply contents;
+		@apply contents text-white;
 	}
  nav {
     @apply text-base tracking-[.168rem]
