@@ -18,7 +18,7 @@
 	let items: TabsProps<Destination>['items'] = [
 		{
 			label: 'moon',
-			img: '/home/moon.jpg',
+			img: '/destination/moon.webp',
 			component: Destination as any,
 			props: {
 				name: 'moon',
@@ -31,7 +31,7 @@
 		},
 		{
 			label: 'mars',
-			img: '/home/mars.jpg',
+			img: '/destination/mars.webp',
 			component: Destination as any,
 			props: {
 				description:
@@ -43,7 +43,7 @@
 		},
 		{
 			label: 'europa',
-			img: '/home/europa.jpg',
+			img: '/destination/europa.webp',
 			component: Destination as any,
 			props: {
 				description:
@@ -55,7 +55,7 @@
 		},
 		{
 			label: 'titan',
-			img: '/home/titan.jpg',
+			img: '/destination/titan.webp',
 			component: Destination as any,
 			props: {
 				description:
@@ -73,7 +73,13 @@
 		<span>0{current + 1}</span><span>Pick your destination</span>
 	</div>
 	<div class="flex items-center justify-center flex-col">
-		<!-- <img src={items[current].img} alt="moon" /> -->
+		<img
+			src={items[current].img}
+			alt={items[current].label}
+			height="170"
+			width="170"
+			class="my-8"
+		/>
 		<Tabs {items} ctxKey="home" />
 	</div>
 </main>
