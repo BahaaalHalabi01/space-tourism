@@ -1,16 +1,16 @@
 <script lang="ts">
 	import { getContext, type Snippet } from 'svelte';
 
-	let { children, index }: { children: Snippet; index: number } = $props();
+	let {
+		children,
+		index,
+		ctxKey,
+	}: { children: Snippet; index: number; ctxKey?: string; label: string } = $props();
 
-	let ctx = getContext<{ current: number; setCurrent: (value: number) => void }>('tab-index');
-
-	function handleClick() {
-		ctx.setCurrent(index);
-	}
+	let ctx = getContext<{ current: number; setCurrent: (value: number) => void }>(ctxKey ?? 'tabs');
 
 </script>
 
-<button class={`${index === ctx?.current && 'border-red-50 border'}`} onclick={handleClick}>
+<div class={`${index !== ctx?.current && 'hidden'}`}>
 	{@render children()}
-</button>
+</div>

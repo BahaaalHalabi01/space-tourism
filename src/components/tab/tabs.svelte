@@ -1,28 +1,44 @@
 <script lang="ts">
-	import type { SvelteNode } from 'svelte/compiler';
 	import TabElement from './tab-element.svelte';
-	import { setContext } from 'svelte';
+	import type { TabsProps } from '$src/components/tab/tabs';
+	import { getContext, setContext } from 'svelte';
+	import type { EventHandler } from 'svelte/elements';
 
-	let { items }: { items: Array<{ label: string; id?: number; component?: SvelteNode }> } =
-		$props();
+	let { items, ctxKey }: TabsProps = $props();
 
-	let current = $state(0);
+	let ctx = getContext<{ current: number; setCurrent: (value: number) => void }>(ctxKey ?? 'tabs');
 
-	setContext('tab-index', {
-		get current() {
-			return current;
-		},
-		setCurrent(value: number) {
-			current = value;
-		}
-	});
+	const handleClick: EventHandler<MouseEvent, HTMLButtonElement> = function (event) {
+		ctx.setCurrent(Number(event.currentTarget.value));
+	};
+
+	if (!ctxKey) {
+		let current = $state(0);
+
+		setContext(ctxKey, {
+			get current() {
+				return current;
+			},
+			setCurrent(value: number) {
+				current = value;
+			}
+		});
+	}
 </script>
 
 <div role="tab" class="flex gap-x-2">
-	{#each items as item, i}
-		<TabElement index={i}>
+	{#each items as item, index}
+		<button
+			class={`${index === ctx?.current && 'border-red-50 border'}`}
+			onclick={handleClick}
+			value={index}
+		>
 			{item.label}
-		</TabElement>
+		</button>
 	{/each}
 </div>
->
+{#each items as item, i}
+	<TabElement index={i} {ctxKey} label={item.label}>
+		<svelte:component this={item.component} {...item.props} />
+	</TabElement>
+{/each}
