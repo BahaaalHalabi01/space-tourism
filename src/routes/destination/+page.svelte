@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Tabs from '$src/components/tab/tabs.svelte';
 	import Destination from '$src/common/destination.svelte';
-	import { setContext, type ComponentProps } from 'svelte';
+	import { setContext } from 'svelte';
 	import type { TabsProps } from '$src/components/tab/tabs';
 
 	let current = $state(0);
@@ -15,10 +15,10 @@
 		}
 	});
 
-	let items: TabsProps<ComponentProps<Destination>>['items'] = [
+	let items: TabsProps<Destination>['items'] = [
 		{
 			label: 'moon',
-			// img: '/home/moon.jpg',
+			img: '/home/moon.jpg',
 			component: Destination as any,
 			props: {
 				name: 'moon',
@@ -32,17 +32,38 @@
 		{
 			label: 'mars',
 			img: '/home/mars.jpg',
-			component: Destination
+			component: Destination as any,
+			props: {
+				description:
+					'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!',
+				avgDistance: '225 MIL. KM',
+				estTravelTime: '9 MONTHS',
+				name: 'mars'
+			}
 		},
 		{
 			label: 'europa',
 			img: '/home/europa.jpg',
-			component: Destination
+			component: Destination as any,
+			props: {
+				description:
+					'The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.',
+				name: 'europa',
+				avgDistance: '628 MIL. KM',
+				estTravelTime: '3 YEARS'
+			}
 		},
 		{
 			label: 'titan',
 			img: '/home/titan.jpg',
-			component: Destination
+			component: Destination as any,
+			props: {
+				description:
+					'The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.',
+				name: 'titan',
+				avgDistance: '1.6 BIL. KM',
+				estTravelTime: '7 years'
+			}
 		}
 	];
 </script>

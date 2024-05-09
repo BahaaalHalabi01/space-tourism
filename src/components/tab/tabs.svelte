@@ -1,10 +1,10 @@
 <script lang="ts">
 	import TabElement from './tab-element.svelte';
 	import type { TabsProps } from '$src/components/tab/tabs';
-	import { getContext, setContext } from 'svelte';
+	import { type SvelteComponent, getContext, setContext } from 'svelte';
 	import type { EventHandler } from 'svelte/elements';
 
-	let { items, ctxKey }: TabsProps = $props();
+	let { items, ctxKey }: TabsProps<SvelteComponent<any>> = $props();
 
 	let ctx = getContext<{ current: number; setCurrent: (value: number) => void }>(ctxKey ?? 'tabs');
 
@@ -39,6 +39,6 @@
 </div>
 {#each items as item, i}
 	<TabElement index={i} {ctxKey} label={item.label}>
-		<svelte:component this={item.component} {...item.props} />
+		<svelte:component this={item.component as any} {...item.props} />
 	</TabElement>
 {/each}
