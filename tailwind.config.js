@@ -3,11 +3,6 @@ import * as theme from 'tailwindcss/defaultTheme';
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    container: {
-      sm: '576px',
-      md: '960px',
-      lg: '1440px'
-    },
     extend: {
       fontSize: {
         '8xl': '9.375rem',
