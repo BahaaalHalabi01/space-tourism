@@ -1,4 +1,4 @@
-<main class="px-6 container">
+<main class="px-6 container relative">
 	<section class="flex flex-col text-center gap-y-8">
 		<h2 class="uppercase">So you want to travel to</h2>
 		<h1 class="uppercase">Space</h1>
@@ -10,3 +10,9 @@
 		<a class="uppercase" href="/destination"> explore</a>
 	</section>
 </main>
+
+<style>
+	:root {
+		@apply bg-home-mobile lg:bg-home;
+	}
+</style>

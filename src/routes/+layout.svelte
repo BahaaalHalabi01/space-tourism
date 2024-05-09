@@ -1,15 +1,14 @@
 <script lang="ts">
 	import '../app.css';
-
 	let { children } = $props();
 </script>
 
-<div class="bg-home-mobile min-h-full bg-cover bg-bottom">
-	<nav class="flex justify-between p-4 bg-transparent">
+<header>
+	<nav class="flex justify-between p-4">
 		<a href="/">
 			<!-- <img src="/home/hello.png" alt="logo" /> -->
 		</a>
 		<button>toggle</button>
 	</nav>
-	{@render children()}
-</div>
+</header>
+{@render children()}

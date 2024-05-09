@@ -83,3 +83,9 @@
 		<Tabs {items} ctxKey="home" />
 	</div>
 </main>
+
+<style>
+	:root {
+		@apply bg-destination-mobile md:bg-destination;
+	}
+</style>
