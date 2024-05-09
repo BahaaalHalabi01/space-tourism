@@ -11,6 +11,9 @@ export default {
         '4xl': '2rem',
         '3xl': '1.75rem'
       },
+      colors:{
+        border:'hsl(var(--border-light))'
+      },
       letterSpacing: {
         wide: '.146rem',
         widest: '.3rem'

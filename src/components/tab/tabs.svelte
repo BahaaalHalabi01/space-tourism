@@ -26,10 +26,11 @@
 	}
 </script>
 
-<div role="tab" class="flex gap-x-2">
+<div role="tab" class="flex gap-x-8">
 	{#each items as item, index}
 		<button
-			class={`${index === ctx?.current && 'border-red-50 border'}`}
+			class:active={index === ctx?.current}
+			class={'pb-3 px-0.5 hover:border-b-[3px] hover:border-border h-9 uppercase'}
 			onclick={handleClick}
 			value={index}
 		>
@@ -42,3 +43,9 @@
 		<svelte:component this={item.component as any} {...item.props} />
 	</TabElement>
 {/each}
+
+<style>
+	.active {
+		@apply border-b-[3px] border-white;
+	}
+</style>

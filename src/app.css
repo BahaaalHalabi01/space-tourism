@@ -9,9 +9,8 @@
 	:root {
 		--background: 230 35% 7%;
 		--main: 231 77% 90%;
+		--border-light: 0 0% 59%;
 	}
-
- 
 
 	html {
 		min-height: 100dvh;
@@ -21,8 +20,7 @@
 	body {
 		@apply contents text-white;
 	}
- nav {
-    @apply text-base tracking-[.168rem]
-  }
-
+	nav {
+		@apply text-base tracking-[.168rem];
+	}
 }
