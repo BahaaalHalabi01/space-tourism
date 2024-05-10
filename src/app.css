@@ -10,6 +10,8 @@
 		--background: 230 35% 7%;
 		--main: 231 77% 90%;
 		--border-light: 0 0% 59%;
+		--border-main: 231 15% 26%;
+    --blue-light:231 79% 90%;
 	}
 
 	html {
@@ -22,5 +24,9 @@
 	}
 	nav {
 		@apply text-base tracking-[.168rem];
+	}
+
+	hr {
+		@apply !border-border;
 	}
 }

@@ -12,7 +12,9 @@ export default {
 				'3xl': '1.75rem'
 			},
 			colors: {
-				border: 'hsl(var(--border-light))'
+				'border-light': 'hsl(var(--border-light))',
+				'border': 'hsl(var(--border-main))',
+				'text-light': 'hsl(var(--blue-light))',
 			},
 			letterSpacing: {
 				wide: '.146rem',

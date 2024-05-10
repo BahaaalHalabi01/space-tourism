@@ -22,11 +22,11 @@
 			component: Destination as any,
 			props: {
 				name: 'moon',
-				avgDistance: '123',
+				avgDistance: '384,400 KM',
 				description: ` See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain 
 	 perspective and come back refreshed. While you’re there, take in some history by visiting the -
 	 Luna 2 and Apollo 11 landing sites. `,
-				estTravelTime: '123'
+				estTravelTime: '3 Days'
 			}
 		},
 		{
@@ -69,8 +69,8 @@
 </script>
 
 <main class="px-6 container">
-	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase">
-		<span>0{current + 1}</span><span>Pick your destination</span>
+	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide">
+		<span class="opacity-25 font-bold">0{current + 1}</span><span>Pick your destination</span>
 	</div>
 	<div class="flex items-center justify-center flex-col">
 		<img
