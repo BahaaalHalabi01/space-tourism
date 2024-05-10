@@ -26,7 +26,7 @@
 	}
 </script>
 
-<div role="tab" class="flex gap-x-8">
+<div role="tab" class="flex gap-x-6">
 	{#each items as item, index}
 		<button
 			class:active={index === ctx?.current}
