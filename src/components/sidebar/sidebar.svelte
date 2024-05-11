@@ -14,7 +14,7 @@
 </button>
 
 <div class="fixed h-full w-full inset-0 z-10" aria-label="overlay" class:hidden={!open}>
-	<div class="w-64 h-full flex flex-col ml-auto pt-6 items-end bg-red-300">
+	<div class="w-64 h-full flex flex-col ml-auto pt-6 items-end backdrop-blur-4xl">
 		<div class="flex items-center px-6 justify-center h-10 w-fit">
 			<button title="close navbar" onclick={handleToggle} class="">
 				<img src="/icon-close.svg" alt="close" />

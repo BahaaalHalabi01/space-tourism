@@ -13,8 +13,8 @@ export default {
 			},
 			colors: {
 				'border-light': 'hsl(var(--border-light))',
-				'border': 'hsl(var(--border-main))',
-				'text-light': 'hsl(var(--blue-light))',
+				border: 'hsl(var(--border-main))',
+				'text-light': 'hsl(var(--blue-light))'
 			},
 			letterSpacing: {
 				wide: '.146rem',
@@ -28,7 +28,10 @@ export default {
 				home: "url('/home/background.jpg')",
 				'home-mobile': "url('/home/background-mobile.jpg')",
 				'destination-mobile': "url('/destination/background-mobile.jpg')",
-				'destination': "url('/destination/background.jpg')"
+				destination: "url('/destination/background.jpg')"
+			},
+			backdropBlur: {
+				'4xl': '81.55px'
 			}
 		}
 	},
