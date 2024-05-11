@@ -1,3 +1,4 @@
+<div class="bg-home-mobile lg:bg-home absolute w-full min-h-full inset-0 -z-10"></div>
 <main class="px-6 container relative">
 	<section class="flex flex-col text-center gap-y-8">
 		<h2 class="uppercase">So you want to travel to</h2>
@@ -12,7 +13,4 @@
 </main>
 
 <style>
-	:root {
-		@apply bg-home-mobile lg:bg-home;
-	}
 </style>

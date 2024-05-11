@@ -68,6 +68,7 @@
 	];
 </script>
 
+<div class="bg-destination-mobile md:bg-destination absolute w-full min-h-full inset-0 -z-10"></div>
 <main class="px-6 container">
 	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide">
 		<span class="opacity-25 font-bold">0{current + 1}</span><span>Pick your destination</span>
@@ -85,7 +86,4 @@
 </main>
 
 <style>
-	:root {
-		@apply bg-destination-mobile md:bg-destination;
-	}
 </style>
