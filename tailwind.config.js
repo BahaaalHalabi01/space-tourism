@@ -14,13 +14,15 @@ export default {
 			colors: {
 				'border-light': 'hsl(var(--border-light))',
 				border: 'hsl(var(--border-main))',
-				'text-light': 'hsl(var(--blue-light))'
+				'text-light': 'hsl(var(--blue-light))',
+				'blueish-black': 'hsl(var(--blueish-black))'
 			},
 			letterSpacing: {
 				wide: '.146rem',
 				widest: '.3rem'
 			},
 			fontFamily: {
+				'sans-condensed': ['"Barlow"', ...theme.fontFamily.sans],
 				sans: ['"Barlow Condensed"', ...theme.fontFamily.sans],
 				serif: ['Bellefair', ...theme.fontFamily.serif]
 			},
