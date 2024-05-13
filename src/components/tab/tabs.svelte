@@ -3,7 +3,7 @@
 	import type { TabsProps } from '$src/components/tab/tabs';
 	import { type SvelteComponent } from 'svelte';
 	import type { EventHandler } from 'svelte/elements';
-	import { getDestination} from '$src/common/current.svelte';
+	import { getDestination} from '$src/common/current-destination.svelte';
 
 	let { items }: TabsProps<SvelteComponent<any>> = $props();
 

@@ -2,7 +2,7 @@
 	import Tabs from '$src/components/tab/tabs.svelte';
 	import Destination from '$src/common/destination.svelte';
 	import type { TabsProps } from '$src/components/tab/tabs';
-	import { getDestination } from '$src/common/current.svelte';
+	import { getDestination } from '$src/common/current-destination.svelte';
 
 	let current = getDestination();
 

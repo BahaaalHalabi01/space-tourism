@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getDestination } from '$src/common/current.svelte';
+	import { getDestination } from '$src/common/current-destination.svelte';
 	import { type Snippet } from 'svelte';
 
 	let { children, index }: { children: Snippet; index: number; ctxKey?: string; label: string } =
