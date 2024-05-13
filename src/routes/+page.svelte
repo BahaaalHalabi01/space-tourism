@@ -12,7 +12,7 @@
 		</div>
 		<a
 			class="uppercase w-[149px] bg-white aspect-square rounded-full flex items-center text-blueish-black justify-center text-xl tracking-[1.25px] mx-auto explore relative"
-			href="/"
+			href="/destination"
 		>
 			explore</a
 		>

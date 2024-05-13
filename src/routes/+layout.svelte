@@ -3,6 +3,8 @@
 	import SidebarContent from '$src/common/sidebar-content.svelte';
 	import '../app.css';
 	let { children } = $props();
+
+
 </script>
 
 <header class="bg-transparent">

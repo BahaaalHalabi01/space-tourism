@@ -8,6 +8,7 @@
 	function handleToggle() {
 		open = !open;
 	}
+
 </script>
 
 <button aria-label="open navbar" title="open navbar" onclick={handleToggle} class:hidden={open}>
