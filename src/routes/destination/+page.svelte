@@ -1,19 +1,12 @@
 <script lang="ts">
 	import Tabs from '$src/components/tab/tabs.svelte';
 	import Destination from '$src/common/destination.svelte';
-	import { setContext } from 'svelte';
 	import type { TabsProps } from '$src/components/tab/tabs';
+	import { getDestination } from '$src/common/current.svelte';
 
-	let current = $state(0);
+	let current = getDestination();
 
-	setContext('home', {
-		get current() {
-			return current;
-		},
-		setCurrent(value: number) {
-			current = value;
-		}
-	});
+	$inspect(current);
 
 	let items: TabsProps<Destination>['items'] = [
 		{
@@ -71,12 +64,14 @@
 <div class="bg-destination-mobile md:bg-destination fixed w-full min-h-full inset-0 -z-10"></div>
 <main class="px-6 container">
 	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide">
-		<span class="opacity-25 font-bold">0{current + 1}</span><span>Pick your destination</span>
+		<span class="opacity-25 font-bold">0{current.current + 1}</span><span
+			>Pick your destination</span
+		>
 	</div>
 	<div class="flex items-center justify-center flex-col">
 		<img
-			src={items[current].img}
-			alt={items[current].label}
+			src={items[current.current].img}
+			alt={items[current.current].label}
 			height="170"
 			width="170"
 			class="my-8"

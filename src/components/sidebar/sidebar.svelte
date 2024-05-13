@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import { onNavigate } from '$app/navigation';
 
 	let { children }: { children: Snippet } = $props();
 
@@ -9,6 +10,9 @@
 		open = !open;
 	}
 
+	onNavigate(() => {
+		open = false;
+	});
 </script>
 
 <button aria-label="open navbar" title="open navbar" onclick={handleToggle} class:hidden={open}>

@@ -1,16 +1,13 @@
 <script lang="ts">
-	import { getContext, type Snippet } from 'svelte';
+	import { getDestination } from '$src/common/current.svelte';
+	import { type Snippet } from 'svelte';
 
-	let {
-		children,
-		index,
-		ctxKey,
-	}: { children: Snippet; index: number; ctxKey?: string; label: string } = $props();
+	let { children, index }: { children: Snippet; index: number; ctxKey?: string; label: string } =
+		$props();
 
-	let ctx = getContext<{ current: number; setCurrent: (value: number) => void }>(ctxKey ?? 'tabs');
-
+	let current = getDestination();
 </script>
 
-<div class={`${index !== ctx?.current && 'hidden'}`}>
+<div class={`${index !== current.current && 'hidden'}`}>
 	{@render children()}
 </div>

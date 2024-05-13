@@ -1,4 +1,4 @@
-<div class="bg-home-mobile lg:bg-home fixed w-full min-h-full inset-0 -z-10"></div>
+<div class="bg-home-mobile lg:bg-home fixed w-full min-h-full inset-0 -z-10 bg-auto"></div>
 <main class="px-6 container relative">
 	<section class="flex flex-col text-center gap-y-24">
 		<div class="py-2">

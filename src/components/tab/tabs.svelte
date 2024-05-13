@@ -1,35 +1,23 @@
 <script lang="ts">
 	import TabElement from './tab-element.svelte';
 	import type { TabsProps } from '$src/components/tab/tabs';
-	import { type SvelteComponent, getContext, setContext } from 'svelte';
+	import { type SvelteComponent } from 'svelte';
 	import type { EventHandler } from 'svelte/elements';
+	import { getDestination} from '$src/common/current.svelte';
 
-	let { items, ctxKey }: TabsProps<SvelteComponent<any>> = $props();
+	let { items }: TabsProps<SvelteComponent<any>> = $props();
 
-	let ctx = getContext<{ current: number; setCurrent: (value: number) => void }>(ctxKey ?? 'tabs');
+	let current = getDestination();
 
 	const handleClick: EventHandler<MouseEvent, HTMLButtonElement> = function (event) {
-		ctx.setCurrent(Number(event.currentTarget.value));
+		current.setCurrent(Number(event.currentTarget.value));
 	};
-
-	if (!ctxKey) {
-		let current = $state(0);
-
-		setContext(ctxKey, {
-			get current() {
-				return current;
-			},
-			setCurrent(value: number) {
-				current = value;
-			}
-		});
-	}
 </script>
 
 <div role="tab" class="flex gap-x-6">
 	{#each items as item, index}
 		<button
-			class:active={index === ctx?.current}
+			class:active={index === current.current}
 			class={'pb-3 px-0.5 hover:border-b-[3px] hover:border-border h-9 uppercase'}
 			onclick={handleClick}
 			value={index}
@@ -39,7 +27,7 @@
 	{/each}
 </div>
 {#each items as item, i}
-	<TabElement index={i} {ctxKey} label={item.label}>
+	<TabElement index={i} label={item.label}>
 		<svelte:component this={item.component as any} {...item.props} />
 	</TabElement>
 {/each}

@@ -30,14 +30,16 @@ export default {
 				home: "url('/home/background.jpg')",
 				'home-mobile': "url('/home/background-mobile.jpg')",
 				'destination-mobile': "url('/destination/background-mobile.jpg')",
-				destination: "url('/destination/background.jpg')"
+				destination: "url('/destination/background.jpg')",
+				crew: "url('/crew/background.jpg')",
+				'crew-mobile': "url('/crew/background-mobile.jpg')"
 			},
 			backdropBlur: {
-				'4xl': '81.55px',
+				'4xl': '81.55px'
 			},
-      ringWidth:{
-        wide:'37.5px'
-      },
+			ringWidth: {
+				wide: '37.5px'
+			}
 		}
 	},
 	plugins: []
