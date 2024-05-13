@@ -33,8 +33,11 @@ export default {
 				destination: "url('/destination/background.jpg')"
 			},
 			backdropBlur: {
-				'4xl': '81.55px'
-			}
+				'4xl': '81.55px',
+			},
+      ringWidth:{
+        wide:'37.5px'
+      },
 		}
 	},
 	plugins: []

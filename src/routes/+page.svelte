@@ -1,4 +1,4 @@
-<div class="bg-home-mobile lg:bg-home absolute w-full min-h-full inset-0 -z-10"></div>
+<div class="bg-home-mobile lg:bg-home fixed w-full min-h-full inset-0 -z-10"></div>
 <main class="px-6 container relative">
 	<section class="flex flex-col text-center gap-y-24">
 		<div class="py-2">
@@ -11,8 +11,8 @@
 			</h3>
 		</div>
 		<a
-			class="uppercase w-[150px] aspect-square rounded-full bg-white flex items-center text-blueish-black justify-center text-xl tracking-[1.25px] mx-auto"
-			href="/destination"
+			class="uppercase w-[149px] bg-white aspect-square rounded-full flex items-center text-blueish-black justify-center text-xl tracking-[1.25px] mx-auto explore relative"
+			href="/"
 		>
 			explore</a
 		>
@@ -20,4 +20,8 @@
 </main>
 
 <style>
+	.explore:after {
+		content: '';
+		@apply size-full absolute rounded-full bg-white/10 -z-10 hover:scale-150 transition-transform focus:scale-150 opacity-0 hover:opacity-100 focus:opacity-100 duration-300;
+	}
 </style>
