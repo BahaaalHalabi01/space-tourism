@@ -9,7 +9,7 @@
 
 <section class="items-center flex flex-col text-center">
 	<h1 class="uppercase text-6xl font-serif pt-4 pb-2 leading-none">{name}</h1>
-	<h2 class="text-text-light px-6 text-center text-[15px] leading-6 tracking-tight min-h-24">
+	<h2 class="text-text-light text-center text-[15px] leading-6 h-28">
 		{description}
 	</h2>
 	<hr class="my-8 w-full !border-border" />

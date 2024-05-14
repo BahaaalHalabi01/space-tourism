@@ -18,7 +18,7 @@
 				name: 'moon',
 				avgDistance: '384,400 KM',
 				description: ` See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain 
-	 perspective and come back refreshed. While you’re there, take in some history by visiting the -
+	 perspective and come back refreshed. While you’re there, take in some history by visiting the
 	 Luna 2 and Apollo 11 landing sites. `,
 				estTravelTime: '3 Days'
 			}
@@ -64,7 +64,7 @@
 
 <div class="bg-destination-mobile md:bg-destination fixed w-full min-h-full inset-0 -z-10"></div>
 <main class="px-6 container pt-6 relative">
-	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide">
+	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide font-sans-condensed">
 		<span class="opacity-25 font-bold">0{ctx.index}</span><span>Pick your destination</span>
 	</div>
 	<div class="flex items-center justify-center flex-col">
@@ -75,7 +75,7 @@
 			width="170"
 			class="my-8"
 		/>
-		<Tabs {items}  />
+		<Tabs {items} />
 	</div>
 </main>
 

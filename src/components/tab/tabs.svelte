@@ -18,7 +18,7 @@
 	{#each items as item, index}
 		<button
 			class:active={index === current.current}
-			class={'pb-3 px-0.5 hover:border-b-[3px] hover:border-border h-9 uppercase'}
+			class={'pb-3 px-0.5 hover:border-b-[3px] hover:border-border h-8 uppercase font-sans-condensed text-sm'}
 			onclick={handleClick}
 			value={index}
 		>

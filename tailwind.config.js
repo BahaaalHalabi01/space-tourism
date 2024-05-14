@@ -22,8 +22,8 @@ export default {
 				widest: '.3rem'
 			},
 			fontFamily: {
-				'sans-condensed': ['"Barlow"', ...theme.fontFamily.sans],
-				sans: ['"Barlow Condensed"', ...theme.fontFamily.sans],
+				'sans-condensed': ['"Barlow Condensed"', ...theme.fontFamily.sans],
+				sans: ['"Barlow"', ...theme.fontFamily.sans],
 				serif: ['Bellefair', ...theme.fontFamily.serif]
 			},
 			backgroundImage: {
