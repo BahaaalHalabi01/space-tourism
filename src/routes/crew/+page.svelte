@@ -22,14 +22,14 @@
 	];
 </script>
 
-<div class="bg-crew-mobile md:bg-crew fixed w-full inset-0 -z-10 bg-cover"></div>
+<div class="bg-crew-mobile md:bg-crew fixed w-full inset-0 -z-10"></div>
 <main class="px-6 container pt-6">
 	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide font-sans-condensed">
 		<span class="opacity-25 font-bold">0{ctx.index}</span><span>meet your Crew</span>
 	</div>
 	<div class="flex items-center justify-center flex-col pt-8">
-		<div class="w-full">
-			<img src={'/crew/image-douglas-hurley.webp'} height="220" width="177" class="mx-auto" />
+		<div class="w-full max-h-56">
+			<img src={'/crew/image-douglas-hurley.webp'} width="177" class="mx-auto" />
 			<hr class="w-full !border-border border-t-2" />
 		</div>
 		<Slider {items} />

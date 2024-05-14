@@ -24,9 +24,9 @@
 		>
 		</button>
 	{/each}
+</div>
 {#each items as item, i}
 	<SliderElement index={i} >
 		<svelte:component this={item.component as any} {...item.props} />
 	</SliderElement >
 {/each}
-</div>
