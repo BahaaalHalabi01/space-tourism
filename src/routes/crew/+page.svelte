@@ -18,6 +18,36 @@
 				name: 'Douglas Hurley',
 				role: 'commander'
 			}
+		},
+		{
+			img: `/crew/image-douglas-hurley.webp`,
+			component: Crew as any,
+			props: {
+				description:
+					'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.',
+				name: 'Douglas Hurley',
+				role: 'commander'
+			}
+		},
+		{
+			img: `/crew/image-douglas-hurley.webp`,
+			component: Crew as any,
+			props: {
+				description:
+					'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.',
+				name: 'Douglas Hurley',
+				role: 'commander'
+			}
+		},
+		{
+			img: `/crew/image-douglas-hurley.webp`,
+			component: Crew as any,
+			props: {
+				description:
+					'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.',
+				name: 'Douglas Hurley',
+				role: 'commander'
+			}
 		}
 	];
 </script>
@@ -27,12 +57,14 @@
 	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide font-sans-condensed">
 		<span class="opacity-25 font-bold">0{ctx.index}</span><span>meet your Crew</span>
 	</div>
-	<div class="flex items-center justify-center flex-col pt-8">
-		<div class="w-full max-h-56">
-			<img src={'/crew/image-douglas-hurley.webp'} width="177" class="mx-auto" />
+	<div class="flex items-center justify-center flex-col pt-8 gap-y-8">
+		<div class="w-full">
+			<img src={'/crew/image-douglas-hurley.webp'} class="mx-auto max-h-56" alt="doughlas" />
 			<hr class="w-full !border-border border-t-2" />
 		</div>
-		<Slider {items} />
+		<div class="flex items-center flex-col">
+			<Slider {items} />
+		</div>
 	</div>
 </main>
 

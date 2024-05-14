@@ -14,11 +14,11 @@
 	};
 </script>
 
-<div role="tab" class="flex gap-x-4">
+<div role="tab" class="flex gap-x-4 pb-2">
 	{#each items as item, index}
 		<button
 			class:active={index === crew.current}
-			class={'pb-3 px-0.5 hover:border-b-[3px] hover:border-border h-9 uppercase'}
+			class={'h-2.5 aspect-square uppercase bg-border-light opacity-[0.18] rounded-full'}
 			onclick={handleClick}
 			value={index}
 		>
@@ -26,7 +26,13 @@
 	{/each}
 </div>
 {#each items as item, i}
-	<SliderElement index={i} >
+	<SliderElement index={i}>
 		<svelte:component this={item.component as any} {...item.props} />
-	</SliderElement >
+	</SliderElement>
 {/each}
+
+<style>
+	.active {
+		@apply opacity-100 bg-white;
+	}
+</style>
