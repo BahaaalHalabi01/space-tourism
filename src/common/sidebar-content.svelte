@@ -6,7 +6,7 @@
 
 </script>
 
-<div class="h-full uppercase flex flex-col gap-y-6 text-white">
+<div class="h-full uppercase flex flex-col gap-y-6 text-white z-10">
 	{#each links as link, i}
 		<div
 			class="flex gap-x-2.5 tracking-wide pb-3 hover:border-b-[3px] hover:border-border h-10 w-fit"

@@ -12,7 +12,7 @@
 	<h2 class="text-text-light px-6 text-center text-[15px] leading-6 tracking-tight min-h-24">
 		{description}
 	</h2>
-	<hr class="my-8 w-full" />
+	<hr class="my-8 w-full !border-border" />
 	<div class="flex flex-col gap-y-1.5">
 		<span class="subheader">Avg. Distance</span>
 		<span class="text-3xl font-serif">{avgDistance}</span>

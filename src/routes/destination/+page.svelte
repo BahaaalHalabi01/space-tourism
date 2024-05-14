@@ -63,7 +63,7 @@
 </script>
 
 <div class="bg-destination-mobile md:bg-destination fixed w-full min-h-full inset-0 -z-10"></div>
-<main class="px-6 container pt-6">
+<main class="px-6 container pt-6 relative">
 	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide">
 		<span class="opacity-25 font-bold">0{ctx.index}</span><span>Pick your destination</span>
 	</div>
@@ -75,7 +75,7 @@
 			width="170"
 			class="my-8"
 		/>
-		<Tabs {items} ctxKey="home" />
+		<Tabs {items}  />
 	</div>
 </main>
 

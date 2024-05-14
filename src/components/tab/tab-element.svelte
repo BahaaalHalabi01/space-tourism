@@ -2,7 +2,7 @@
 	import { getDestination } from '$src/common/current-destination.svelte';
 	import { type Snippet } from 'svelte';
 
-	let { children, index }: { children: Snippet; index: number; ctxKey?: string; label: string } =
+	let { children, index }: { children: Snippet; index: number; label: string } =
 		$props();
 
 	let current = getDestination();

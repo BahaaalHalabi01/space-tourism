@@ -29,7 +29,4 @@
 		@apply text-base tracking-[.168rem];
 	}
 
-	hr {
-		@apply !border-border;
-	}
 }

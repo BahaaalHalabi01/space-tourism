@@ -1,4 +1,4 @@
-import { SvelteComponent, type ComponentProps  } from 'svelte';
+import type { SvelteComponent, ComponentProps  } from 'svelte';
 
 export type TabsProps<T extends SvelteComponent> = {
 	items: Array<{
@@ -8,6 +8,4 @@ export type TabsProps<T extends SvelteComponent> = {
 		img: string;
 		props?: ComponentProps<T>;
 	}>;
-
-	ctxKey?: string;
 };
