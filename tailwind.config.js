@@ -32,7 +32,9 @@ export default {
 				'destination-mobile': "url('/destination/background-mobile.jpg')",
 				destination: "url('/destination/background.jpg')",
 				crew: "url('/crew/background.jpg')",
-				'crew-mobile': "url('/crew/background-mobile.jpg')"
+				'crew-mobile': "url('/crew/background-mobile.jpg')",
+				technology: "url('/technology/background.jpg')",
+				'technology-mobile': "url('/technology/background-mobile.jpg')"
 			},
 			backdropBlur: {
 				'4xl': '81.55px'

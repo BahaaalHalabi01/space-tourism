@@ -19,7 +19,7 @@
 				role: 'commander'
 			}
 		},
-{
+		{
 			img: `/crew/image-mark-shuttleworth.webp`,
 			component: Crew as any,
 			props: {
@@ -29,7 +29,7 @@
 				role: 'mission specialist'
 			}
 		},
-{
+		{
 			img: `/crew/image-victor-glover.webp`,
 			component: Crew as any,
 			props: {
@@ -39,7 +39,7 @@
 				role: 'pilot'
 			}
 		},
-{
+		{
 			img: `/crew/image-anousheh-ansari.webp`,
 			component: Crew as any,
 			props: {
@@ -48,7 +48,7 @@
 				name: 'Anousheh Ansari',
 				role: 'flight engineer'
 			}
-		},
+		}
 	];
 </script>
 
