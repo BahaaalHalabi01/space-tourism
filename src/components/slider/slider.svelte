@@ -1,5 +1,4 @@
 <script lang="ts">
-	import {type SvelteComponent } from 'svelte';
 	import type { EventHandler } from 'svelte/elements';
 	import type { SliderProps } from './slider';
 	import SliderElement from './slider-element.svelte';
@@ -9,9 +8,9 @@
 		showNumber = false,
 		getter,
 		setter
-	}: SliderProps<SvelteComponent<any>> = $props();
+	}: SliderProps<Record<string, any>> = $props();
 
-	const crew = getter();
+	const current = getter();
 
 	const handleClick: EventHandler<MouseEvent, HTMLButtonElement> = function (event) {
 		setter(Number(event.currentTarget.value));
@@ -21,8 +20,10 @@
 <div role="tab" class="flex gap-x-4 pb-2">
 	{#each items as item, index}
 		<button
-			class:active={index === crew.current}
-			class={'h-2.5 aspect-square uppercase bg-border-light opacity-[0.18] rounded-full'}
+			class:active={index === current.current}
+			class:showNumber
+			class:base={!showNumber}
+			class="rounded-full aspect-square text-center"
 			onclick={handleClick}
 			value={index}
 		>
@@ -31,13 +32,26 @@
 	{/each}
 </div>
 {#each items as item, i}
-	<SliderElement active={crew.current === i}>
+	<SliderElement {getter} index={i}>
 		<svelte:component this={item.component as any} {...item.props} />
 	</SliderElement>
 {/each}
 
+<!-- add CVA to avoid the important tags -->
 <style>
 	.active {
-		@apply opacity-100 bg-white;
+		@apply !opacity-100 !bg-white;
+
+		&.showNumber {
+			@apply !bg-white !text-blueish-black;
+		}
+	}
+
+	.base {
+		@apply h-2.5 bg-border-light opacity-[0.18];
+	}
+
+	.showNumber {
+		@apply h-10 opacity-100 bg-transparent border-white/25 border w-10;
 	}
 </style>

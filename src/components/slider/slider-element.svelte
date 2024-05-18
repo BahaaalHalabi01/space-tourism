@@ -1,9 +1,15 @@
 <script lang="ts">
 	import { type Snippet } from 'svelte';
 
-	let { children, active }: { children: Snippet; active: boolean } = $props();
+	let {
+		children,
+		getter,
+		index
+	}: { children: Snippet; getter: () => { current: number }; index: number } = $props();
+
+	const current = getter();
 </script>
 
-<div class={!active ? 'hidden' : ''}>
+<div class={current.current !== index ? 'hidden' : ''}>
 	{@render children()}
 </div>

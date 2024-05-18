@@ -1,13 +1,12 @@
-import type { ComponentProps, SvelteComponent } from 'svelte';
-
-export type SliderProps<T extends SvelteComponent> = {
+export type SliderProps<T extends Record<string,any>> = {
 	showNumber?: boolean;
 	getter: () => { current: number };
 	setter: (value: number) => void;
 	items: Array<{
 		id?: number;
-		component?: T;
+    /**@todo fix this later, why are components still classes ?*/
+		component?:any;
 		img: string;
-		props?: ComponentProps<T>;
+		props?: T;
 	}>;
 };
