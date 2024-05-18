@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Tabs from '$src/components/tab/tabs.svelte';
-	import Destination from '$src/common/destination.svelte';
 	import { getContext } from 'svelte';
 	import type { TabsProps } from '$src/components/tab/tabs';
-	import { getDestination } from '$src/common/current-destination.svelte';
+	import Destination from '$src/common/destination/destination.svelte';
+	import { getDestination } from '$src/common/destination/current-destination.svelte';
 
 	let current = getDestination();
 

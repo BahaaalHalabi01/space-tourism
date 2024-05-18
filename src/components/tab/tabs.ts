@@ -1,4 +1,4 @@
-import type { SvelteComponent, ComponentProps  } from 'svelte';
+import type { SvelteComponent, ComponentProps } from 'svelte';
 
 export type TabsProps<T extends SvelteComponent> = {
 	items: Array<{

@@ -14,10 +14,11 @@
 
 	let index = $derived(links.findIndex((link) => link.href === $page.url.pathname));
 
-
-  setContext('page-index',{
-    get index(){return index}
-  })
+	setContext('page-index', {
+		get index() {
+			return index;
+		}
+	});
 
 	let { children } = $props();
 </script>

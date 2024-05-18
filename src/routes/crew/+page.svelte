@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getCrew } from '$src/common/current-crew.svelte';
+	import { getCrew } from '$src/common/crew/current-crew.svelte';
 	import type { SliderProps } from '$src/components/slider/slider';
 	import Crew from '$src/common/crew/crew.svelte';
 	import Slider from '$src/components/slider/slider.svelte';

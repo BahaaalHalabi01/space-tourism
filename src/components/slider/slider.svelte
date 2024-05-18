@@ -2,10 +2,10 @@
 	import type { SvelteComponent } from 'svelte';
 	import type { EventHandler } from 'svelte/elements';
 	import type { SliderProps } from './slider';
-	import { getCrew } from '$src/common/current-crew.svelte';
+	import { getCrew } from '$src/common/crew/current-crew.svelte';
 	import SliderElement from './slider-element.svelte';
 
-	let { items = [] }: SliderProps<SvelteComponent<any>> = $props();
+	let { items = [], showNumber = false }: SliderProps<SvelteComponent<any>> = $props();
 
 	const crew = getCrew();
 
@@ -22,6 +22,7 @@
 			onclick={handleClick}
 			value={index}
 		>
+			{showNumber}
 		</button>
 	{/each}
 </div>

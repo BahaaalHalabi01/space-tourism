@@ -1,1 +1,1 @@
-export type SideBar= {hello:''}
+export type SideBar = { hello: '' };

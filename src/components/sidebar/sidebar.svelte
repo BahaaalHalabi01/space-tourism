@@ -19,7 +19,7 @@
 	<img src="/icon-hamburger.svg" alt="open" />
 </button>
 
-<div class="fixed h-full w-full inset-0 z-20 " aria-label="overlay" class:hidden={!open}>
+<div class="fixed h-full w-full inset-0 z-20" aria-label="overlay" class:hidden={!open}>
 	{#if open}
 		<div
 			class="w-64 h-full flex flex-col ml-auto pt-6 items-end backdrop-blur-4xl"

@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-  let {links}:{links:Array<{href:string,label:string}>} = $props()
-
-
+	let { links }: { links: Array<{ href: string; label: string }> } = $props();
 </script>
 
 <div class="h-full uppercase flex flex-col gap-y-6 text-white z-10">
