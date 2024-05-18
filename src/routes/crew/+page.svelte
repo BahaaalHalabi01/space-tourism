@@ -63,7 +63,7 @@
 			<hr class="w-full !border-border border-t-2" />
 		</div>
 		<div class="flex items-center flex-col">
-			<Slider {items} />
+			<Slider {items} setter={crew.setCurrent} getter={getCrew} />
 		</div>
 	</div>
 </main>

@@ -1,12 +1,9 @@
 <script lang="ts">
-	import { getCrew } from '$src/common/crew/current-crew.svelte';
 	import { type Snippet } from 'svelte';
 
-	let { children, index }: { children: Snippet; index: number } = $props();
-
-	let current = getCrew();
+	let { children, active }: { children: Snippet; active: boolean } = $props();
 </script>
 
-<div class={`${index !== current.current && 'hidden'}`}>
+<div class={!active ? 'hidden' : ''}>
 	{@render children()}
 </div>

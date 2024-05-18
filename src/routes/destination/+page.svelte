@@ -67,7 +67,7 @@
 	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide font-sans-condensed">
 		<span class="opacity-25 font-bold">0{ctx.index}</span><span>Pick your destination</span>
 	</div>
-	<div class="flex items-center justify-center flex-col">
+	<div class="flex items-center justify-center flex-col pb-6">
 		<img
 			src={items[current.current].img}
 			alt={items[current.current].label}

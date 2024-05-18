@@ -1,16 +1,20 @@
 <script lang="ts">
-	import type { SvelteComponent } from 'svelte';
+	import {type SvelteComponent } from 'svelte';
 	import type { EventHandler } from 'svelte/elements';
 	import type { SliderProps } from './slider';
-	import { getCrew } from '$src/common/crew/current-crew.svelte';
 	import SliderElement from './slider-element.svelte';
 
-	let { items = [], showNumber = false }: SliderProps<SvelteComponent<any>> = $props();
+	let {
+		items = [],
+		showNumber = false,
+		getter,
+		setter
+	}: SliderProps<SvelteComponent<any>> = $props();
 
-	const crew = getCrew();
+	const crew = getter();
 
 	const handleClick: EventHandler<MouseEvent, HTMLButtonElement> = function (event) {
-		crew.setCurrent(Number(event.currentTarget.value));
+		setter(Number(event.currentTarget.value));
 	};
 </script>
 
@@ -22,12 +26,12 @@
 			onclick={handleClick}
 			value={index}
 		>
-			{showNumber}
+			{showNumber ? index : null}
 		</button>
 	{/each}
 </div>
 {#each items as item, i}
-	<SliderElement index={i}>
+	<SliderElement active={crew.current === i}>
 		<svelte:component this={item.component as any} {...item.props} />
 	</SliderElement>
 {/each}
