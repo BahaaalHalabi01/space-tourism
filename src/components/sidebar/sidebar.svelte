@@ -15,7 +15,13 @@
 	});
 </script>
 
-<button aria-label="open navbar" title="open navbar" onclick={handleToggle} class:hidden={open}>
+<button
+	aria-label="open navbar"
+	title="open navbar"
+	onclick={handleToggle}
+	class:hidden={open}
+	class="md:hidden mt-6 mr-6"
+>
 	<img src="/icon-hamburger.svg" alt="open" />
 </button>
 

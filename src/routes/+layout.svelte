@@ -24,10 +24,22 @@
 </script>
 
 <header class="bg-transparent">
-	<nav class="flex justify-between px-6 pt-6 bg-transparent items-center">
-		<a href="/">
+	<nav class="flex justify-between bg-transparent">
+		<a href="/" class="ml-6 mt-6">
 			<img src="/logo.svg" alt="logo" class="size-10 aspect-square" />
 		</a>
+			<ul class="md:flex gap-x-10 text-sm uppercase tracking-wide hidden items-center bg-red-300 px-10 font-sans-condensed">
+				{#each links as link}
+					<a
+						class=" hover:border-b-[3px] hover:border-white w-fit"
+						class:active={$page.url.pathname === link.href}
+						href={link.href}
+						aria-label={link.label}
+					>
+						{link.label}
+					</a>
+				{/each}
+			</ul>
 		<Sidebar>
 			<SidebarContent {links} />
 		</Sidebar>
