@@ -62,18 +62,20 @@
 	];
 </script>
 
-<div class="bg-destination-mobile md:bg-destination fixed w-full min-h-full inset-0 -z-10"></div>
-<main class="px-6 container pt-6 relative">
-	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide font-sans-condensed">
-		<span class="opacity-25 font-bold">0{ctx.index}</span><span>Pick your destination</span>
+<div
+	class="fixed inset-0 -z-10 min-h-full w-full bg-destination-mobile md:bg-destination-tablet lg:bg-destination"
+></div>
+<main class="container relative px-6 pt-6">
+	<div
+		class=" mx-auto flex max-w-fit gap-x-4 font-sans-condensed uppercase tracking-wide md:mx-0 md:text-xl"
+	>
+		<span class="font-bold opacity-25">0{ctx.index}</span><span>Pick your destination</span>
 	</div>
-	<div class="flex items-center justify-center flex-col pb-6">
+	<div class="flex flex-col items-center justify-center pb-6 md:pt-8">
 		<img
 			src={items[current.current].img}
 			alt={items[current.current].label}
-			height="170"
-			width="170"
-			class="my-8"
+			class="my-8 aspect-square w-[170px] md:w-[300px] md:mb-10"
 		/>
 		<Tabs {items} />
 	</div>

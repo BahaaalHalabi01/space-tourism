@@ -32,6 +32,7 @@ export default {
 				'home-mobile': "url('/home/background-mobile.jpg')",
 				'home-tablet': "url('/home/background-tablet.jpg')",
 				'destination-mobile': "url('/destination/background-mobile.jpg')",
+				'destination-tablet': "url('/destination/background-tablet.jpg')",
 				destination: "url('/destination/background.jpg')",
 				crew: "url('/crew/background.jpg')",
 				'crew-mobile': "url('/crew/background-mobile.jpg')",

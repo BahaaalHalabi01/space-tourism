@@ -29,7 +29,7 @@
 			<img src="/logo.svg" alt="logo" class="size-10 aspect-square" />
 		</a>
 		<ul
-			class="md:flex gap-x-10 text-sm uppercase tracking-wide hidden items-center bg-border-light/[4%]  px-10 font-sans-condensed h-24"
+			class="md:flex gap-x-10 text-sm uppercase tracking-wide hidden items-center backdrop-blur-md px-10 font-sans-condensed h-24 bg-black/5"
 		>
 			{#each links as link}
 				<li class:active={$page.url.pathname === link.href} class="flex items-stretch h-full">
