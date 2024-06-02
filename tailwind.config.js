@@ -5,6 +5,7 @@ export default {
 	theme: {
 		extend: {
 			fontSize: {
+        '9xl':'10.875rem',
 				'8xl': '9.375rem',
 				'7xl': '6.25rem',
 				'6xl': '3.5rem',
@@ -29,6 +30,7 @@ export default {
 			backgroundImage: {
 				home: "url('/home/background.jpg')",
 				'home-mobile': "url('/home/background-mobile.jpg')",
+				'home-tablet': "url('/home/background-tablet.jpg')",
 				'destination-mobile': "url('/destination/background-mobile.jpg')",
 				destination: "url('/destination/background.jpg')",
 				crew: "url('/crew/background.jpg')",

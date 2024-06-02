@@ -1,19 +1,23 @@
-<div class="bg-home-mobile lg:bg-home fixed w-full min-h-full inset-0 -z-10 bg-auto"></div>
-<main class="px-6 container relative pt-6">
-	<section class="flex flex-col text-center gap-y-20">
+<div
+	class="bg-home-mobile md:bg-home-tablet lg:bg-home fixed w-full min-h-full inset-0 -z-10 bg-auto"
+></div>
+<main class="px-6 container relative pt-6 md:pt-24">
+	<section class="flex flex-col text-center gap-y-20 md:gap-y-40">
 		<div class="space-y-8">
-			<h2 class="uppercase font-sans-condensed text-text-light tracking-wide">
+			<h2 class="uppercase font-sans-condensed text-text-light tracking-wide md:text-[20px]">
 				So, you want to travel to
 			</h2>
-			<h1 class="uppercase text-[80px] font-serif leading-none">Space</h1>
-			<h3 class="text-[15px] leading-[25px] text-text-light">
+			<h1 class="uppercase text-[80px] font-serif leading-none md:text-8xl">Space</h1>
+			<h3
+				class="text-[15px] leading-[25px] text-text-light md:max-w-md md:px-1 mx-auto md:text-base"
+			>
 				Let’s face it; if you want to go to space, you might as well genuinely go to outer space and
 				not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly
 				out of this world experience!
 			</h3>
 		</div>
 		<a
-			class="uppercase w-[149px] bg-white aspect-square rounded-full flex items-center text-blueish-black justify-center text-xl tracking-[1.25px] mx-auto explore relative"
+			class="uppercase w-[149px] md:w-[242px] md:text-4xl bg-white aspect-square rounded-full flex items-center text-blueish-black justify-center text-xl tracking-[1.25px] mx-auto explore relative font-serif"
 			href="/destination"
 		>
 			explore</a
