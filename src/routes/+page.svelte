@@ -28,6 +28,8 @@
 <style>
 	.explore:after {
 		content: '';
+
+
 		@apply size-full absolute rounded-full bg-white/10 -z-10 hover:scale-150 transition-transform focus:scale-150 opacity-0 hover:opacity-100 focus:opacity-100 duration-300;
 	}
 </style>
