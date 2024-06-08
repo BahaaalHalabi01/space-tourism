@@ -34,7 +34,7 @@
 			{#each links as link}
 				<li
 					class:active-link={$page.url.pathname === link.href}
-					class="flex h-full items-stretch border-white hover:border-b-[2px]"
+					class="flex h-full items-stretch border-white hover:border-b-[3px] hover:border-border"
 				>
 					<a class="flex h-full w-fit items-center" href={link.href} aria-label={link.label}>
 						{link.label}
