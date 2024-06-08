@@ -75,7 +75,7 @@
 		<img
 			src={items[current.current].img}
 			alt={items[current.current].label}
-			class="my-8 aspect-square w-[170px] md:w-[300px] md:mb-10"
+			class="my-8 aspect-square w-[170px] md:mb-10 md:w-[300px]"
 		/>
 		<Tabs {items} />
 	</div>

@@ -19,7 +19,7 @@
 	html {
 		min-height: 100dvh;
 		height: 100%;
-		@apply font-sans;
+		@apply font-sans bg-black;
 	}
 
 	body {
@@ -27,5 +27,9 @@
 	}
 	nav {
 		@apply text-base tracking-[.168rem];
+	}
+
+	.active-link {
+		@apply border-b-[2px] border-white text-white;
 	}
 }

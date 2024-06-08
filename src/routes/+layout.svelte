@@ -26,18 +26,17 @@
 <header class="bg-transparent">
 	<nav class="flex justify-between bg-transparent">
 		<a href="/" class="ml-6 mt-6">
-			<img src="/logo.svg" alt="logo" class="size-10 aspect-square" />
+			<img src="/logo.svg" alt="logo" class="aspect-square size-10 md:size-12" />
 		</a>
 		<ul
-			class="md:flex gap-x-10 text-sm uppercase tracking-wide hidden items-center backdrop-blur-md px-10 font-sans-condensed h-24 bg-black/5"
+			class="hidden h-24 items-center gap-x-10 bg-border-light/5 px-10 font-sans-condensed text-sm uppercase tracking-wide backdrop-blur-md md:flex"
 		>
 			{#each links as link}
-				<li class:active={$page.url.pathname === link.href} class="flex items-stretch h-full">
-					<a
-						class="w-fit h-full flex items-center hover:border-b-[3px] border-white"
-						href={link.href}
-						aria-label={link.label}
-					>
+				<li
+					class:active-link={$page.url.pathname === link.href}
+					class="flex h-full items-stretch border-white hover:border-b-[2px]"
+				>
+					<a class="flex h-full w-fit items-center" href={link.href} aria-label={link.label}>
 						{link.label}
 					</a>
 				</li>

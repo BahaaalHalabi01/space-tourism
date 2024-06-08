@@ -31,8 +31,8 @@
 			class="w-64 h-full flex flex-col ml-auto pt-6 items-end backdrop-blur-4xl"
 			transition:fly={{ duration: 300, x: '100vw' }}
 		>
-			<div class="flex items-center px-6 justify-center h-10 w-fit">
-				<button title="close navbar" onclick={handleToggle} class="">
+			<div class="flex items-center px-6 justify-center h-10  w-full">
+				<button title="close navbar" onclick={handleToggle} class="w-full">
 					<img src="/icon-close.svg" alt="close" />
 				</button>
 			</div>

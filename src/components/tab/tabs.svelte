@@ -17,7 +17,7 @@
 <div role="tab" class="flex gap-x-6 md:gap-x-8">
 	{#each items as item, index}
 		<button
-			class:active={index === current.current}
+			class:active-link={index === current.current}
 			class={'h-8 px-0.5 pb-3 font-sans-condensed text-sm uppercase text-text-light hover:border-b-[3px] hover:border-border md:h-9 md:text-base md:tracking-wide'}
 			onclick={handleClick}
 			value={index}
@@ -32,8 +32,3 @@
 	</TabElement>
 {/each}
 
-<style>
-	.active {
-		@apply border-b-[3px] border-white text-white;
-	}
-</style>

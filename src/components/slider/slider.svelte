@@ -23,7 +23,7 @@
 			class:active={index === current.current}
 			class:showNumber
 			class:base={!showNumber}
-			class="rounded-full aspect-square text-center"
+			class="aspect-square rounded-full text-center"
 			onclick={handleClick}
 			value={index}
 		>
@@ -37,12 +37,11 @@
 	</SliderElement>
 {/each}
 
-<!-- add CVA to avoid the important tags -->
 <style>
-	.active {
-		@apply !opacity-100 !bg-white;
+	.active button {
+		@apply bg-white opacity-100;
 
-		&.showNumber {
+		&.showNumber button {
 			@apply !bg-white !text-blueish-black;
 		}
 	}
@@ -52,6 +51,6 @@
 	}
 
 	.showNumber {
-		@apply h-10 opacity-100 bg-transparent border-white/25 border w-10;
+		@apply h-10 w-10 border border-white/25 bg-transparent opacity-100;
 	}
 </style>

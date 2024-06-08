@@ -7,7 +7,7 @@
 <div class="h-full uppercase flex flex-col gap-y-6 text-white z-10">
 	{#each links as link, i}
 		<a
-			class="flex gap-x-2.5 tracking-wide pb-3 hover:border-b-[3px] hover:border-border h-10 w-fit"
+			class="flex gap-x-2.5 tracking-wide pb-3 hover:border-b-[3px] hover:border-border h-10 w-full"
 			class:active={$page.url.pathname === link.href}
 			href={link.href}
 			aria-label={link.label}
