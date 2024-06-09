@@ -15,10 +15,13 @@
 	const handleClick: EventHandler<MouseEvent, HTMLButtonElement> = function (event) {
 		setter(Number(event.currentTarget.value));
 	};
+
+  $inspect(current)
+
 </script>
 
-<div role="tab" class="flex gap-x-4 pb-2">
-	{#each items as item, index}
+<div role="tab" class="flex gap-x-4 pb-2 md:order-last md:pt-8">
+	{#each items as _, index}
 		<button
 			class:active={index === current.current}
 			class:showNumber
@@ -38,10 +41,10 @@
 {/each}
 
 <style>
-	.active button {
+	button.active {
 		@apply bg-white opacity-100;
 
-		&.showNumber button {
+		&.showNumber {
 			@apply !bg-white !text-blueish-black;
 		}
 	}

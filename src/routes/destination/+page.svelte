@@ -62,7 +62,7 @@
 	];
 </script>
 
-<div
+<div 
 	class="fixed inset-0 -z-10 min-h-full w-full bg-destination-mobile md:bg-destination-tablet lg:bg-destination"
 ></div>
 <main class="container relative px-6 pt-6">

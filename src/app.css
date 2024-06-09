@@ -18,7 +18,6 @@
 
 	html {
 		min-height: 100dvh;
-		height: 100%;
 		@apply font-sans bg-black;
 	}
 

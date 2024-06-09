@@ -7,6 +7,8 @@ export type SliderProps<T extends Record<string,any>> = {
     /**@todo fix this later, why are components still classes ?*/
 		component?:any;
 		img: string;
+    imgWidth?:number
+    imgHeight?:number
 		props?: T;
 	}>;
 };

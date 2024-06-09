@@ -8,7 +8,7 @@
 	{#each links as link, i}
 		<a
 			class="flex gap-x-2.5 tracking-wide pb-3 hover:border-b-[3px] hover:border-border h-10 w-full"
-			class:active={$page.url.pathname === link.href}
+			class:active-link={$page.url.pathname === link.href}
 			href={link.href}
 			aria-label={link.label}
 		>
@@ -18,8 +18,3 @@
 	{/each}
 </div>
 
-<style>
-	.active {
-		@apply border-b-[3px] border-white;
-	}
-</style>

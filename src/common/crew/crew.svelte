@@ -4,10 +4,10 @@
 	let { role, name, description }: CrewProps = $props();
 </script>
 
-<section class="items-center flex flex-col text-center">
-	<h3 class="uppercase font-serif pt-4 leading-none text-white/50">{role}</h3>
-	<h1 class="uppercase text-2xl font-serif pt-3 leading-none pb-3">{name}</h1>
-	<h2 class="text-text-light px-2 text-center text-[15px] leading-6 tracking-none min-h-24">
+<section class="flex flex-col items-center text-center md:max-w-[458px] md:gap-y-2">
+	<h3 class="pt-4 font-serif uppercase leading-none text-white/50 md:text-2xl">{role}</h3>
+	<h1 class="pb-3 pt-3 font-serif text-2xl uppercase leading-none md:text-[40px]">{name}</h1>
+	<h2 class="tracking-none min-h-24 px-2 text-center text-[15px] leading-6 text-text-light md:text-base">
 		{description}
 	</h2>
 </section>
