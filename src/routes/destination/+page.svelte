@@ -65,7 +65,7 @@
 <div 
 	class="fixed inset-0 -z-10 min-h-full w-full bg-destination-mobile md:bg-destination-tablet lg:bg-destination"
 ></div>
-<main class="container relative px-6 pt-6">
+<main class="container relative px-6 md:px-10 pt-6">
 	<div
 		class=" mx-auto flex max-w-fit gap-x-4 font-sans-condensed uppercase tracking-wide md:mx-0 md:text-xl"
 	>

@@ -25,7 +25,7 @@
 
 <header class="bg-transparent">
 	<nav class="flex justify-between bg-transparent">
-		<a href="/" class="ml-6 mt-6">
+		<a href="/" class="ml-6 md:ml-10 mt-6">
 			<img src="/logo.svg" alt="logo" class="aspect-square size-10 md:size-12" />
 		</a>
 		<ul

@@ -59,7 +59,7 @@
 </script>
 
 <div class="fixed inset-0 -z-10 w-full bg-crew-mobile md:bg-crew-tablet lg:bg-crew"></div>
-<main class="container min-h-full px-6 pt-6 flex flex-col grow">
+<main class="container min-h-full px-6 pt-6 md:px-10 flex flex-col grow">
 	<div
 		class=" mx-auto flex max-w-fit gap-x-4 font-sans-condensed uppercase tracking-wide md:mx-0 md:text-xl"
 	>

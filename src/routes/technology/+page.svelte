@@ -40,15 +40,16 @@
 	];
 </script>
 
-<!-- @todo make the same image but with -margin and without changing the padding on main -->
-<div class="bg-technology-mobile md:bg-technology fixed w-full inset-0 -z-10"></div>
-<main class=" pt-6">
-	<div class=" max-w-fit mx-auto flex gap-x-4 uppercase tracking-wide font-sans-condensed px-6">
-		<span class="opacity-25 font-bold">0{ctx.index}</span><span>Space launch 101</span>
+<div class="fixed inset-0 -z-10 w-full bg-technology-mobile md:bg-technology"></div>
+<main class="pt-6">
+	<div
+		class=" mx-auto flex max-w-fit gap-x-4 font-sans-condensed uppercase tracking-wide md:mx-0 md:text-xl md:px-10"
+	>
+		<span class="font-bold opacity-25">0{ctx.index}</span><span>Space launch 101</span>
 	</div>
-	<div class="flex items-center justify-center flex-col pt-8 gap-y-8">
-		<img src={items.at(tech.current)?.img} class="mx-auto max-h-56 -ml-6 -mr-6" alt="doughlas" />
-		<div class="flex items-center flex-col px-6">
+	<div class="flex flex-col items-center justify-center gap-y-8 pt-8">
+		<img src={items.at(tech.current)?.img} class="mx-auto -ml-6 -mr-6 max-h-56" alt="doughlas" />
+		<div class="flex flex-col items-center px-6">
 			<Slider {items} setter={tech.setCurrent} getter={getTechnology} showNumber={true} />
 		</div>
 	</div>
