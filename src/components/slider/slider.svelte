@@ -7,7 +7,8 @@
 		items = [],
 		showNumber = false,
 		getter,
-		setter
+		setter,
+		className
 	}: SliderProps<Record<string, any>> = $props();
 
 	const current = getter();
@@ -16,11 +17,10 @@
 		setter(Number(event.currentTarget.value));
 	};
 
-  $inspect(current)
-
+	$inspect(current);
 </script>
 
-<div role="tab" class="flex gap-x-4 pb-2 md:order-last md:pt-8">
+<div role="tab" class={`flex gap-x-4 pb-2 md:order-last md:pt-8 ${className}`}>
 	{#each items as _, index}
 		<button
 			class:active={index === current.current}
@@ -54,6 +54,6 @@
 	}
 
 	.showNumber {
-		@apply h-10 w-10 border border-white/25 bg-transparent opacity-100;
+		@apply size-10 border border-white/25 bg-transparent opacity-100 md:size-[60px];
 	}
 </style>

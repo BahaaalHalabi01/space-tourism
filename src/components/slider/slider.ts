@@ -1,5 +1,6 @@
 export type SliderProps<T extends Record<string,any>> = {
 	showNumber?: boolean;
+  className?:string
 	getter: () => { current: number };
 	setter: (value: number) => void;
 	items: Array<{

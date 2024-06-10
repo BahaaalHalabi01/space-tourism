@@ -43,14 +43,18 @@
 <div class="fixed inset-0 -z-10 w-full bg-technology-mobile md:bg-technology"></div>
 <main class="pt-6">
 	<div
-		class=" mx-auto flex max-w-fit gap-x-4 font-sans-condensed uppercase tracking-wide md:mx-0 md:text-xl md:px-10"
+		class=" mx-auto flex max-w-fit gap-x-4 font-sans-condensed uppercase tracking-wide md:mx-0 md:px-10 md:text-xl"
 	>
 		<span class="font-bold opacity-25">0{ctx.index}</span><span>Space launch 101</span>
 	</div>
-	<div class="flex flex-col items-center justify-center gap-y-8 pt-8">
-		<img src={items.at(tech.current)?.img} class="mx-auto -ml-6 -mr-6 max-h-56" alt="doughlas" />
+	<div class="flex w-full flex-col items-center justify-center gap-y-8 pt-8">
+		<img
+			src={items.at(tech.current)?.img}
+			class="mx-auto -ml-6 -mr-6 max-h-[310px] w-full md:max-h-80"
+			alt="doughlas"
+		/>
 		<div class="flex flex-col items-center px-6">
-			<Slider {items} setter={tech.setCurrent} getter={getTechnology} showNumber={true} />
+			<Slider {items} setter={tech.setCurrent} getter={getTechnology} showNumber={true}  className='md:order-first'/>
 		</div>
 	</div>
 </main>
